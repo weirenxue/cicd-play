@@ -4,12 +4,14 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - run: ./setup_server.sh
+      - run: ls /
   build:
+    needs: setup
     runs-on: ubuntu-latest
     steps:
-      - run: ./build_server.sh
+      - run: ls /
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: ./test_server.sh
+      - run: ls /
