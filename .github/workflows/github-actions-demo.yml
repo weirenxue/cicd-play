@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: touch weirenxue
+      - run: echo ${{ secrets.SECRET_TEST }}
   test:
     needs: build
     runs-on: ubuntu-latest
